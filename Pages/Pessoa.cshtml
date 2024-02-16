@@ -1,0 +1,28 @@
+﻿@page "/"
+@model FirstWebApp.Pages.PessoaModel
+@{
+    ViewData["Title"] = "Pessoa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Instâncias da classe "Pessoa"</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pessoa in Model.Pessoas)
+            {
+                <tr>
+                    <td>@pessoa.Name</td>
+                    <td>@pessoa.Age</td>
+                    <td>@pessoa.Cpf</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
